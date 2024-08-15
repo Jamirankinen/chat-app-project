@@ -16,5 +16,13 @@ export default defineSchema({
       groupName: v.optional(v.string()),
       groupImage: v.optional(v.string()),
       admin: v.optional(v.id('users'))
-   })
+   }),
+
+   messages: defineTable({
+      conversation: v.id('conversations'),
+      sender: v.string(), //should be a string so it doesnt show any errors in openai part chatGPT
+      content: v.string(),
+      messageType: v.union(v.literal('text'), v.literal('image'),
+   v.literal('video')),
+   }).index('by_conversation', ['conversation']),
 });
