@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Dialog, DialogContent, DialogDescription } from "../ui/dialog";
 import ReactPlayer from "react-player";
 import ChatAvatarActions from "./chat-avatar-actions";
+import { Bot } from "lucide-react";
 
 type ChatBubbleProps = {
 	message: IMessage;
@@ -50,10 +51,11 @@ const ChatBubble = ({me, message, previousMessage}:ChatBubbleProps) => {
 	<>
 	<DateIndicator message={message} previousMessage={previousMessage} />
 	<div className='flex gap-1 w-2/3'>
-	<ChatBubbleAvatar isGroup={isGroup} isMember={isMember} message={message}  />
+	<ChatBubbleAvatar isGroup={isGroup} isMember={isMember} message={message} fromAI={fromAI}  />
 	<div className={`flex flex-col z-20 max-w-fit px-2 pt-1 rounded-md shadow-md relative ${bgClass}`}>
-	<OtherMessageIndicator />
-	{isGroup && <ChatAvatarActions 
+	{!fromAI && <OtherMessageIndicator />}
+	{fromAI && <Bot size={16} className="absolute bottom-[2px] left-2" />}
+	{ <ChatAvatarActions 
 	   message={message}
 	   me={me}
 	/>}
