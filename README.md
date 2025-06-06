@@ -1,10 +1,38 @@
-This is a chat-app made to look similar to whatsapp. There is Clerk used for authorization, Convex for database and Typescript to build the web application. This works just fine on desktop/laptop but it's not very responsive so it doesnt look as good on mobile (I will fix this with time). 
+# Chat App Project 🚀
 
-When you open the site it will ask you to log in with Google account for security reasons. 
-You can create 1 on 1 or group chats with anyone who was logged in with google.
-You can also use chatgbt to answer your questions, just write @gbt "your question"
-You can use dall-e to create a picture for you, just write @dall-e "your description of the image"
+A real-time chat application built with  React, Typescript, Node.js, Convex, CSS, Socket.IO. Demonstrating modern frontend skills, responsive design, and full-stack coordination.
 
-Feel free to explore my simple web app! :)
+## 📌 Overview
+This project shows my ability to build real-time interfaces, handle WebSocket communication, and manage both client- and server-side logic.
 
-Chat-app: https://chat-app-project-tau.vercel.app
+## 🎯 Key Features
+- **User authentication** (sign up / login) via Clerk
+- **Real-time messaging** via Socket.IO
+- **Multiple chat rooms** with dynamic room creation/joining
+- **Responsive UI** built with Flexbox/SCSS
+- **Message timestamping**
+- **Basic input validation & error handling**
+
+## 🛠️ Tech Stack
+- **Frontend:** React, SCSS, Socket.IO client
+- **Backend:** Node.js, Express, Socket.IO
+- **Database:** Convex
+- **Tools:** Webpack/Babel, ESLint, Prettier
+
+## 🚀 Live Demo
+- 🔗 https://chat-app-project-tau.vercel.app
+
+## 🧩 Installation & Setup
+```bash
+git clone https://github.com/Jamirankinen/chat-app-project.git
+cd chat-app-project
+
+# Install dependencies
+npm install
+
+# Start backend
+cd server && npm start
+
+# Start frontend
+cd ../client && npm start
+
